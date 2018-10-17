@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Fri Oct 05 09:41:58 CEST 2018
+1.base=C\:\\Users\\ThomasPeter\\ICourse_New\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=mydatabase.sqlite
+0.set=ASSET
+0.base=C\:\\Users\\ThomasPeter\\ICourse_New\\app\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
+1.path=classes.dex

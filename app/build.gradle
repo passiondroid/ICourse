@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.icloud.cronin.peter"
+        minSdkVersion 16
+        targetSdkVersion 28
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-v4:28.0.0'
+    }}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+   // implementation 'com.facebook.shimmer:shimmer:0.3.0'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation files('libs/Parse-1.8.3.jar')
+    implementation project(':library')
+}
