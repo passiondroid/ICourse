@@ -2,22 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-     >
-    
-    <TextView 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
         android:id="@+id/tv_course"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/data"
+        tools:text="@string/data"
         android:textSize="15sp"
         android:paddingBottom="5dp"/>
-    
-     <TextView 
+
+    <TextView
         android:id="@+id/tv_course_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/data_2"
+        tools:text="@string/data_2"
         android:textSize="15sp"
         android:paddingBottom="5dp"/>
 </LinearLayout>

@@ -12,7 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.icloud.cronin.peter.R;
-import com.icloud.cronin.peter.model.RaceCourse;
+import com.icloud.cronin.peter.data.model.RaceCourse;
 
 public class ListAdapter extends BaseAdapter{
 	

@@ -6,6 +6,10 @@
         android:icon="@android:drawable/ic_menu_edit"
         app:showAsAction="always"
         android:title="@string/action_edit"/>
-    
 
+    <item
+        android:id="@+id/action_locations"
+        android:icon="@drawable/yatch"
+        app:showAsAction="always"
+        android:title="@string/action_update_locations"/>
 </menu>

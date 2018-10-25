@@ -19,13 +19,20 @@ android {
 configurations.all {
     resolutionStrategy {
         force 'com.android.support:support-v4:28.0.0'
-    }}
+    }
+}
 
 dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
-   // implementation 'com.facebook.shimmer:shimmer:0.3.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
-    implementation files('libs/Parse-1.8.3.jar')
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation "android.arch.persistence.room:runtime:$rootProject.androidArchVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.androidArchVersion"
     implementation project(':library')
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
 }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Name: CUSH"/>
+
+    <TextView
+        android:id="@+id/latitudeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/nameTV"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Latitude: 53.41027778"/>
+
+    <TextView
+        android:id="@+id/longitudeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeTV"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Longitude: -6.09083333"/>
+
+    <TextView
+        android:id="@+id/markerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/longitudeTV"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Marker: C"/>
+
+</android.support.constraint.ConstraintLayout>

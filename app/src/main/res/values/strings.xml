@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">I_Course</string>
+    <string name="app_name">I Course</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="eg">eg; 015 Enter 1015</string>
@@ -22,10 +22,11 @@
     <string name="exit">Exit</string>
     <string name="data">Data</string>
     <string name="data_2">Data 2</string>
-    
+
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="action_edit">Edit</string>
+    <string name="action_update_locations">Locations</string>
     <string name="action_sync">Sync</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
@@ -35,4 +36,6 @@
     <string name="space"> </string>
     <string name="name">I Course</string>
     <string name="sync_dialog_text">Syncing...\n Please Wait</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_add">Add</string>
 </resources>
