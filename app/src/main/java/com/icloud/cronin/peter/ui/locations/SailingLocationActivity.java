@@ -1,8 +1,10 @@
 package com.icloud.cronin.peter.ui.locations;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import com.icloud.cronin.peter.R;
 import com.icloud.cronin.peter.adapter.LocationListAdapter;
 import com.icloud.cronin.peter.application.ICourseApp;
@@ -17,6 +20,7 @@ import com.icloud.cronin.peter.data.database.ICourseDatabase;
 import com.icloud.cronin.peter.data.model.RaceLocation;
 import com.icloud.cronin.peter.ui.editlocation.EditLocationActivity;
 import com.icloud.cronin.peter.util.Constants;
+
 import java.util.List;
 
 /**
@@ -96,6 +100,49 @@ public class SailingLocationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        locationListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(SailingLocationActivity.this)
+                        .setMessage("Do you want to delete this location")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                deleteLocation(position);
+                                dialog.dismiss();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                builder.show();
+                return true;
+            }
+        });
+    }
+
+    private void deleteLocation(final int position){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                RaceLocation raceLocation = locations.get(position);
+                database.locationDao().deleteLocation(raceLocation);
+                locations = database.locationDao().getAllLocations();
+                if (locations != null && !locations.isEmpty()) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            adapter.setLocations(locations);
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
+                }
+            }
+        }).start();
     }
 
 }

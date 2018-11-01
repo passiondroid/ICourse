@@ -19,6 +19,10 @@ public class LocationListAdapter extends BaseAdapter {
 	    this.raceLocation = raceLocation;
 	}
 
+	public void setLocations(List<RaceLocation> raceLocation){
+        this.raceLocation = raceLocation;
+    }
+
 	@Override
 	public int getCount() {
 		return raceLocation.size();
