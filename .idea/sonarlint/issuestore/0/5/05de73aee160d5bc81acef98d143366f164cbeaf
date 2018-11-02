@@ -1,0 +1,28 @@
+
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(б╘╥ЦЫЪЪЪЪ8пяе╣И,
+squid:S1488"^Immediately return this expression instead of assigning it to the temporary variable "_query".(≈╡ТЫЧЪЪЪЪ8пяе╣И,
+msquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(═°е8пяе╣И,
+jsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ЧО╧с8пяе╣И,
+lsquid:S00116"ORename this field "__db" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ЮшТг8пяе╣И,
+├squid:S00116"iRename this field "__insertionAdapterOfRaceCourse" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(┘├ └8пяе╣И,
+┬squid:S00116"fRename this field "__updateAdapterOfRaceCourse" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ЦЁъ├ЧЪЪЪЪ8пяе╣И,
+▒squid:S00116"oRename this field "__preparedStmtOfDeleteCourseByNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ТёА▀ЗЪЪЪЪ8пяе╣И,
+msquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(═°е8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(┤опь8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(д²кр8пяе╣И,
+msquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(═Ефj8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ╨Н─8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(░з├М8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ╨Н─8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Д│┼∙8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(╥┴├╠8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²╫╥ю8пяе╣И,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(щв≈ЁЫЪЪЪЪ8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Д│┼∙8пяе╣И,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(б╘╥ЦЫЪЪЪЪ8пяе╣И,
+ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(жгЪ╨ЧЪЪЪЪ8пяе╣И,
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²╫╥ю8пяе╣И,
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(ржЙ°8пяе╣И,
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(З╝з╠8пяе╣И,
+squid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(Тщ·уЩЪЪЪЪ8пяе╣И,
+squid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(╓Н≤сЭЪЪЪЪ8пяе╣И,

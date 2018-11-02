@@ -1,0 +1,4 @@
+
+^squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ƒúà¶
+ksquid:UselessImportCheck"BRemove this unused import 'org.robolectric.RobolectricTestRunner'.(êáû³ûÿÿÿÿ
+Žsquid:UselessImportCheck"eRemove this unused import 'com.throrinstudio.android.common.libs.validator.validator.EmailValidator'.(ÈŒ£®üÿÿÿÿ

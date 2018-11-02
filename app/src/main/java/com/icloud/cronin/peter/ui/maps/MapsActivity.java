@@ -3,6 +3,8 @@ package com.icloud.cronin.peter.ui.maps;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -23,6 +25,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.icloud.cronin.peter.R;
 import com.icloud.cronin.peter.application.ICourseApp;
@@ -30,6 +33,7 @@ import com.icloud.cronin.peter.data.database.ICourseDatabase;
 import com.icloud.cronin.peter.data.model.RaceLocation;
 import com.icloud.cronin.peter.util.Constants;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -49,6 +53,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ICourseDatabase database = ICourseApp.iCourseDatabase;
     private List<RaceLocation> raceLocations;
     private String course;
+    private Location currentLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,19 +120,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         try {
             if (mLocationPermissionsGranted) {
-                final Task location = mFusedLocationProviderClient.getLastLocation();
-                location.addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        if (task.isSuccessful()) {
-                            Log.d(Tag, "onComplete: found location!");
-                            String[] locationInitials = course.split("\\s+");
-                            findLocationByInitials(locationInitials);
-                        } else {
-                            Log.d(Tag, "onComplete: current location is null");
-                        }
-                    }
-                });
+                mFusedLocationProviderClient.getLastLocation()
+                        .addOnSuccessListener(new OnSuccessListener<Location>() {
+                            @Override
+                            public void onSuccess(Location location) {
+                                if (location != null) {
+                                    currentLocation = location;
+                                    Log.d(Tag, "onComplete: found location!");
+                                    String[] locationInitials = course.split("\\s+");
+                                    findLocationByInitials(locationInitials);
+                                } else {
+                                    Log.d(Tag, "onComplete: current location is null");
+                                }
+                            }
+                        });
+//                locationTask.addOnCompleteListener(new OnCompleteListener() {
+//                    @Override
+//                    public void onComplete(@NonNull Task task) {
+//                        if (task.isSuccessful()) {
+//                            Log.d(Tag, "onComplete: found location!");
+//                            String[] locationInitials = course.split("\\s+");
+//                            findLocationByInitials(locationInitials);
+//                        } else {
+//                            Log.d(Tag, "onComplete: current location is null");
+//                        }
+//                    }
+//                });
             }
         } catch (SecurityException e) {
             Log.d(Tag, "getDeviceLocation: SecurityException:" + e.getMessage());
@@ -199,9 +217,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void setMarker(double latitude, double longitude, String title) {
+        HashMap<String,Float> distanceAndBearingMap = calculateDistanceAndBearing(new LatLng(latitude,longitude));
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(latitude, longitude))
                 .title(title)
+                .snippet("Distance : "+distanceAndBearingMap.get("DISTANCE")
+                        + " metres, Bearing: "+distanceAndBearingMap.get("BEARING"))
                 .icon(getIcon(title)));
     }
 
@@ -271,5 +292,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return null;
         }
     }
+
+    private HashMap<String,Float> calculateDistanceAndBearing(LatLng latLng2) {
+        Location loc1 = new Location(LocationManager.GPS_PROVIDER);
+        Location loc2 = new Location(LocationManager.GPS_PROVIDER);
+
+        loc1.setLatitude(currentLocation.getLatitude());
+        loc1.setLongitude(currentLocation.getLongitude());
+
+        loc2.setLatitude(latLng2.latitude);
+        loc2.setLongitude(latLng2.longitude);
+
+        //Range from -180 to 180
+        float bearing = loc1.bearingTo(loc2);
+
+        //Distance in meteres
+        float distance = loc1.distanceTo(loc2);
+
+        HashMap<String,Float> distanceBearingMap = new HashMap<>();
+        distanceBearingMap.put("BEARING",bearing);
+        distanceBearingMap.put("DISTANCE",distance);
+        return distanceBearingMap;
+    }
+
 
 }
