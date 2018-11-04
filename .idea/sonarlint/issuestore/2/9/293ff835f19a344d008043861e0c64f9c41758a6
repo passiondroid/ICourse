@@ -1,0 +1,17 @@
+
+ssquid:S00116"TRename this field "EditEntry" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¤ÆŸ8ôß“Óê,
+usquid:S00116"VRename this field "DeleteEntry" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¤ÆŸ8ôß“Óê,
+Csquid:S1659"%Declare "GetInfo" on a separate line.(µ¤ÆŸ8ôß“Óê,
+€squid:S1450"]Remove the "etCourseNumber" field and declare it as a local variable in the relevant methods.(ó·¹şÿÿÿÿ8ôß“Óê,
+@squid:S1659""Declare "Exit" on a separate line.(µ¤ÆŸ8ôß“Óê,
+qsquid:S00116"RRename this field "GetInfo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¤ÆŸ8ôß“Óê,
+xsquid:S1450"URemove the "intent" field and declare it as a local variable in the relevant methods.(–Ô¼ùÿÿÿÿ8ôß“Óê,
+nsquid:S00116"ORename this field "Exit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¤ÆŸ8ôß“Óê,
+wsquid:S00116"XRename this field "course_number" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À¼üú8ôß“Óê,
+nsquid:CommentedOutCodeLineb"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ôß“Óê,
+Esquid:S1659"'Declare "EditEntry" on a separate line.(µ¤ÆŸ8ôß“Óê,
+Gsquid:S1659")Declare "DeleteEntry" on a separate line.(µ¤ÆŸ8ôß“Óê,
+rsquid:S00116"SRename this field "ViewData" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¤ÆŸ8ôß“Óê,
+nsquid:CommentedOutCodeLine]"<This block of commented-out lines of code should be removed.( ·«‡üÿÿÿÿ8ôß“Óê,
+Psquid:S1659"-Declare "etCourseDetails" on a separate line.(ó·¹şÿÿÿÿ8ôß“Óê,
+W"squid:SwitchLastCaseIsDefaultCheckN""Add a default case to this switch.(ºÖ8ôß“Óê,

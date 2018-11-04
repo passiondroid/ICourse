@@ -1,0 +1,8 @@
+
+‰squid:S14500"kRemove the "mFusedLocationProviderClient" field and declare it as a local variable in the relevant methods.(¾àŸ£8ÏºÂîì,
+W
+squid:S106­"9Replace this use of System.out or System.err by a logger.(×†÷©8ÏºÂîì,
+\
+squid:S106®"9Replace this use of System.out or System.err by a logger.(ÖŞùŠşÿÿÿÿ8ÏºÂîì,
+Xsquid:S2209c"5Change this instance-reference to a static reference.(³˜Ñ‡üÿÿÿÿ8ÏºÂîì,
+ysquid:S00115'"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ã»Û³8ÏºÂîì,

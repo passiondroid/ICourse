@@ -1,0 +1,8 @@
+
+^squid:S1192."GDefine a constant instead of duplicating this literal "abcdef" 4 times.(Ñ¿¢–
+ssquid:S1450"WRemove the "mContext" field and declare it as a local variable in the relevant methods.(»úÅ¾øÿÿÿÿ
+^squid:S00112#"FDefine and throw a dedicated exception instead of using a generic one.(‹Ü¢†
+^squid:S00112,"FDefine and throw a dedicated exception instead of using a generic one.(°ËÌÆ
+csquid:S001125"FDefine and throw a dedicated exception instead of using a generic one.(µ†¥šøÿÿÿÿ
+^squid:S00112>"FDefine and throw a dedicated exception instead of using a generic one.(¤æ¡
+ksquid:UselessImportCheck"BRemove this unused import 'org.robolectric.RobolectricTestRunner'.(êáû³ûÿÿÿÿ

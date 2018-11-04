@@ -1,0 +1,5 @@
+
+Fsquid:S3010;"*Remove this assignment of "mErrorMessage".(“òĞüøÿÿÿÿ
+psquid:S3973O"YUse curly braces or indentation to denote the code conditionally executed by this "else".(ÔÍØ
+nsquid:S00116"VRename this field "START_RANGE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿè…ë
+lsquid:S00116"TRename this field "END_RANGE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—€Î‰
