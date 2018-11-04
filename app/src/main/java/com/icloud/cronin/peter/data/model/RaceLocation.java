@@ -111,6 +111,7 @@ public class RaceLocation {
                 new RaceLocation( "CUSH","53.41027778", "-6.09083333", "C"),
                 new RaceLocation( "DUNBO","53.41222222", "-6.06416667", "D"),
                 new RaceLocation( "EAST","53.43333333", "-6.03666667", "E"),
+                new RaceLocation( "FINISH","53.440488", "-6.135038", "F"),
                 new RaceLocation( "GARBH","53.41666667", "-6.03861111", "G"),
                 new RaceLocation( "HUB","53.42861111", "-6.0738889", "H"),
                 new RaceLocation( "ISLAND","53.41166667", "-6.07277778", "I"),
@@ -127,7 +128,8 @@ public class RaceLocation {
                 new RaceLocation( "ULYSSES","53.43694444", "-6.08277778", "U"),
                 new RaceLocation( "VICEROY","53.41861111", "-6.07972222", "V"),
                 new RaceLocation( "WEST","53.41611111", "-6.10111111", "W"),
-                new RaceLocation( "XEBEC","53.40194444", "-6.07222222", "X")
+                new RaceLocation( "XEBEC","53.40194444", "-6.07222222", "X"),
+                new RaceLocation( "WINDWARD", "53.413364", "-6.135984", "Z")
         };
     }
 

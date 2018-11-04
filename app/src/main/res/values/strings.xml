@@ -6,7 +6,7 @@
     <string name="eg">eg; 015 Enter 1015</string>
     <string name="enter">Enter 1 Then The Course #</string>
     <string name="course_to_steer">Course To Steer</string>
-    <string name="get_course">Get Course</string>
+    <string name="get_course"><font fgcolor= "#A62C23"></font> marks F and Z HAVE NO POSITION</string>
     <string name="edit_data">EditData</string>
     <string name="enter_data">Enter Data</string>
     <string name="edit_database">Edit Database</string>
@@ -14,7 +14,8 @@
     <string name="course_no">Course No</string>
     <string name="course">Course</string>
     <string name="get_information">Get Information</string>
-    <string name="enter_course_number">Enter Course Number</string>
+    <string name="enter_course_number"><font size="15">Enter Course Number</font></string>
+    <string name="edittext_hint"><font size="15"> Hint here!</font></string>
     <string name="enter_course">Enter Course</string>
     <string name="add"> Add </string>
     <string name="delete_entry">Delete entry</string>

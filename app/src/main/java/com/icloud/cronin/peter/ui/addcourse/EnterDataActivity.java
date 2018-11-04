@@ -23,7 +23,7 @@ public class EnterDataActivity extends Activity   {
 	EditText editTextCourseNumber;
 	EditText editTextCourseDetails;
 	Spinner colordropdown;
-	String[] colors = {"Black","Red","Green"};
+	String[] colors = {"Black","Red","Green", "Yellow"};
 	String finaltext = "";
 	private ICourseDatabase database = ICourseApp.iCourseDatabase;
 
@@ -77,6 +77,8 @@ public class EnterDataActivity extends Activity   {
 					color = Constants.black;
 				}else if(color.equalsIgnoreCase("green")){
 					color = Constants.green;
+				}else if(color.equalsIgnoreCase("yellow")){
+					color = Constants.yellow;
 				}
 				finaltext = finaltext + "&nbsp;<font color='"+color+"'>"+newtext+"</font>" ;
 				editTextCourseDetails.setText(Html.fromHtml(finaltext),TextView.BufferType.SPANNABLE);

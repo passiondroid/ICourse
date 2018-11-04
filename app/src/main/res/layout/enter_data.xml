@@ -83,6 +83,8 @@
         android:layout_below="@+id/layout_button"
         android:gravity="top|left"
         android:inputType="textNoSuggestions|textMultiLine"
+        android:textSize="30dp"
+        android:textStyle="bold"
         android:padding="2dp"
         android:clickable="false" 
         android:cursorVisible="false" 

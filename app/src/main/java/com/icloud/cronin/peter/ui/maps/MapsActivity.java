@@ -191,7 +191,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         double lng = Double.parseDouble(clusterLocation.getLongitude());
 
         for (int i = 0; i < 2; i++) {
-            double offset = i * 0.002;
+            double offset = i * 0.00002;
             lat = lat + offset;
             lng = lng + offset;
             setMarker(lat,lng, clusterLocation.getMarkerCharacter().toUpperCase());
@@ -235,6 +235,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_d);
             case "E":
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_e);
+            case "F":
+                return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker60_f);
             case "G":
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_g);
             case "H":
@@ -245,6 +247,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_j);
             case "K":
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_k);
+            case "M":
+                return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_m);
             case "N":
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_n);
             case "O":
@@ -267,6 +271,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_w);
             case "X":
                 return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker_x);
+            case "Z":
+                return BitmapDescriptorFactory.fromResource(R.drawable.mapmarker60_z);
             default:
                 return null;
         }

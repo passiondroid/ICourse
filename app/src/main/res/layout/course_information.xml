@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/hycracearea2"
+    >
 
     <EditText
         android:id="@+id/etSQLrowInfo"
@@ -10,10 +13,12 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="15dp"
-        android:ems="10"
-        android:imeOptions="actionDone"
         android:hint="@string/enter_course_number"
-        android:inputType="number" >
+        android:textColorHint="@color/bright_blue"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:imeOptions="actionDone"
+        android:inputType="number">
 
         <requestFocus />
     </EditText>
@@ -27,6 +32,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:text="@string/course_to_steer"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
     <EditText
@@ -41,6 +48,8 @@
         android:layout_above="@+id/bgetcourse"
         android:gravity="top|left"
         android:inputType="textNoSuggestions|textMultiLine"
+        android:textSize="30dp"
+        android:textStyle="bold"
         android:padding="2dp"
         android:clickable="false" 
         android:cursorVisible="false" 
@@ -51,11 +60,12 @@
         android:id="@+id/bgetcourse"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btnMap"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_above="@+id/btnMap"
         android:layout_marginTop="15dp"
-        android:text="@string/get_course" />
+        android:text="@string/get_course"
+        android:textColor= "@color/red65" />
 
     <Button
         android:id="@+id/btnMap"
