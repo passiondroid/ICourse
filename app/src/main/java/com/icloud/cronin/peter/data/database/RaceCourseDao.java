@@ -20,6 +20,9 @@ public interface RaceCourseDao {
     @Insert
     long addRaceCourse(RaceCourse raceCourse);
 
+    @Insert
+    void insertAll(RaceCourse... raceCourses);
+
     @Query("SELECT * FROM RACE_COURSE")
     List<RaceCourse> getAllCourses();
 

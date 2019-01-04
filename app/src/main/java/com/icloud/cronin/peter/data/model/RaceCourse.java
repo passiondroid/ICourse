@@ -21,7 +21,16 @@ public class RaceCourse {
     @ColumnInfo(name = "dateAdded")
     private Date dateAdded;
 
-	public String getCourse() {
+    public RaceCourse() {
+    }
+
+    public RaceCourse(@NonNull String courseNumber, String course) {
+        this.courseNumber = courseNumber;
+        this.course = course;
+        this.dateAdded = new Date();
+    }
+
+    public String getCourse() {
 		return course;
 	}
 
@@ -43,5 +52,13 @@ public class RaceCourse {
 
     public void setDateAdded(Date dateAdded) {
         this.dateAdded = dateAdded;
+    }
+
+    public static RaceCourse[] populateData() {
+        return new RaceCourse[] {
+                new RaceCourse( "001","&nbsp;<font color='#000000'>Z</font>&nbsp;<font color='#000000'>W</font>&nbsp;<font color='#ff0000'>H</font>"),
+                new RaceCourse( "002","&nbsp;<font color='#000000'>A</font>&nbsp;<font color='#000000'>B</font>&nbsp;<font color='#ff0000'>C</font>"),
+                new RaceCourse( "003","&nbsp;<font color='#000000'>J</font>&nbsp;<font color='#000000'>H</font>&nbsp;<font color='#ff0000'>K</font>"),
+        };
     }
 }

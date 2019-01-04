@@ -24,9 +24,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.icloud.cronin.peter.R;
 import com.icloud.cronin.peter.application.ICourseApp;
 import com.icloud.cronin.peter.data.database.ICourseDatabase;
@@ -134,18 +132,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 }
                             }
                         });
-//                locationTask.addOnCompleteListener(new OnCompleteListener() {
-//                    @Override
-//                    public void onComplete(@NonNull Task task) {
-//                        if (task.isSuccessful()) {
-//                            Log.d(Tag, "onComplete: found location!");
-//                            String[] locationInitials = course.split("\\s+");
-//                            findLocationByInitials(locationInitials);
-//                        } else {
-//                            Log.d(Tag, "onComplete: current location is null");
-//                        }
-//                    }
-//                });
             }
         } catch (SecurityException e) {
             Log.d(Tag, "getDeviceLocation: SecurityException:" + e.getMessage());
@@ -217,7 +203,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void setMarker(double latitude, double longitude, String title) {
-        HashMap<String,Float> distanceAndBearingMap = calculateDistanceAndBearing(new LatLng(latitude,longitude));
+        HashMap<String,String> distanceAndBearingMap = calculateDistanceAndBearing(new LatLng(latitude,longitude));
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(latitude, longitude))
                 .title(title)
@@ -299,7 +285,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    private HashMap<String,Float> calculateDistanceAndBearing(LatLng latLng2) {
+    private HashMap<String,String> calculateDistanceAndBearing(LatLng latLng2) {
         Location loc1 = new Location(LocationManager.GPS_PROVIDER);
         Location loc2 = new Location(LocationManager.GPS_PROVIDER);
 
@@ -311,13 +297,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         //Range from -180 to 180
         float bearing = loc1.bearingTo(loc2);
+        if (bearing < 0) {
+            bearing = bearing + 360;
+        }
+        int bearingInt = (int) bearing;
 
-        //Distance in meteres
+        //Distance in metres
         float distance = loc1.distanceTo(loc2);
+        int distanceInt = (int) distance;
 
-        HashMap<String,Float> distanceBearingMap = new HashMap<>();
-        distanceBearingMap.put("BEARING",bearing);
-        distanceBearingMap.put("DISTANCE",distance);
+        //TODO: Distance in kms and metres
+        HashMap<String,String> distanceBearingMap = new HashMap<>();
+        distanceBearingMap.put("BEARING",String.valueOf(bearingInt));
+        distanceBearingMap.put("DISTANCE",String.valueOf(distanceInt));
         return distanceBearingMap;
     }
 
